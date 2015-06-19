@@ -15,3 +15,9 @@ EX: {IP:XXXX,CPU:XXXX,MEMORY:XXXX,JBOSS_INS_COUNT:XXXXX}<br>
 1.透過手機重啟環境<br>
 
 2.透過手機重啟整台SERVER<br>
+
+設計:<br>
+(detail - bower.json)<br>
+1. angularJs<br>
+2. front-end template - html5-boilerplate<br>
+3. RWD Framework -pure<br>

@@ -28,3 +28,22 @@
   content: "";
   padding: 0;
 }
+
+.container {
+  min-height:100%;
+  position:relative;
+  width:90%;
+  margin:0 auto;
+  padding-bottom: 3em;
+}
+
+.footer {
+  background: #111 none repeat scroll 0% 0%;
+  color: #666;
+  text-align: center;
+  padding: 1em;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  font-size: 80%;
+}
