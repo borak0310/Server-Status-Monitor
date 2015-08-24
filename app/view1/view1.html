@@ -20,6 +20,7 @@
             </tr>
         </thead>
         <tbody ng-repeat="statusItems in serverStatusList">
+            <tr>
                 <td>{{$index+1}}</td>
                 <td>{{statusItems.serverName}}</td>
                 <td>{{statusItems.cpu}}%</td>
