@@ -1,5 +1,10 @@
 /* app css stylesheet */
 
+
+body {
+  margin-bottom: 50px;
+  clear: both;
+}
 .footer {
   background: #111 none repeat scroll 0% 0%;
   color: #666;
