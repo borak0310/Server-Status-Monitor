@@ -10,10 +10,35 @@ angular.module('myApp.contacts', ['ngRoute'])
     }])
 
     .controller('ContactsCtrl', function ($scope) {
-        $scope.contactList = [
-            {apName: 'OMS', contact1: '50', contact2: '20', contact3: '18'},
-            {apName: 'CRM', contact1: '50', contact2: '20', contact3: '18'},
-            {apName: 'SOM', contact1: '50', contact2: '20', contact3: '18'}
-        ];
-
+        $scope.contactList = json;
     });
+
+    var json = [
+        {
+            depName: 'BS2',
+            apName: 'OMS',
+            contact: [
+                {empName:'oms a',tel:'123-456-789'},
+                {empName:'oms b',tel:'223-456-789'},
+                {empName:'oms c',tel:'323-456-789'}
+            ]
+        },
+        {
+            depName: 'BS2',
+            apName: 'SOM',
+            contact: [
+                {empName:'som a',tel:'123-456-889'},
+                {empName:'som b',tel:'223-456-989'},
+                {empName:'som c',tel:'323-456-089'}
+            ]
+        },
+        {
+            depName: 'BS2',
+            apName: 'CRM',
+            contact: [
+                {empName:'crm a',tel:'133-456-889'},
+                {empName:'crm b',tel:'243-456-989'},
+                {empName:'crm c',tel:'353-456-089'}
+            ]
+        }
+    ];
