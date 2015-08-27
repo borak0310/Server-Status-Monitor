@@ -16,11 +16,13 @@
     <tbody ng-repeat="items in contactList">
     <tr>
       <td>{{$index+1}}</td>
-      <td>{{items.apName}}</td>
       <td>{{items.depName}}</td>
+      <td>{{items.apName}}</td>
       <td>
         <div ng-repeat="contacts in items.contact">
-          {{contacts.empName}} TEL: {{contacts.tel}}
+          <p><i class="fa fa-user"></i> &nbsp; {{contacts.empName}}</p>
+          <p><i class="fa fa-mobile"></i> &nbsp; <a href="tel:{{contacts.tel}}">{{contacts.tel}}</a></p>
+          <hr/>
         </div>
       </td>
     </tr>
