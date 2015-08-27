@@ -1,0 +1,32 @@
+<!doctype html>
+
+<p>SERVER LAST UPDATE: 2015/07/11 09:50</p>
+
+<div class=" table-responsive" ng-controller="ContactsCtrl">
+  <!-- Default panel contents -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>DEP NAME</th>
+      <th>AP NAME</th>
+      <th>CONTACT</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="items in contactList">
+    <tr>
+      <td>{{$index+1}}</td>
+      <td>{{items.apName}}</td>
+      <td>{{items.depName}}</td>
+      <td>
+        <div ng-repeat="contacts in items.contact">
+          {{contacts.empName}} TEL: {{contacts.tel}}
+        </div>
+      </td>
+    </tr>
+    <tr ng-show="items.warning">
+      <td colspan="3">Warning !!!</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
