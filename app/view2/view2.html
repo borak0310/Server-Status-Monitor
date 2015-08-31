@@ -2,46 +2,76 @@
 <hr>
 
 <form class="form-horizontal">
-  <!--jmx["java.lang:type=OperatingSystem", "SystemLoadAverage"]-->
-  <div class="form-group">
-    <label for="threading" class="col-sm-3">OS system load average:</label>
-    <div id="threading" class="col-sm-5" ng-controller="View2Ctrl">
-      {{threading}}
+    <!--jmx["java.lang:type=OperatingSystem", "SystemLoadAverage"]-->
+    <div class="form-group">
+        <label for="threading" class="col-sm-3">OS system load average:</label>
+
+        <div id="threading" class="col-sm-5" ng-controller="View2Ctrl">
+            {{threading}}
+        </div>
     </div>
-  </div>
-  <!--jmx["java.lang:type=OperatingSystem", "ProcessCpuTime"]-->
-  <div class="form-group">
-    <label for="cpuStatus" class="col-sm-3">CPU time:</label>
-    <div id="cpuStatus" class="col-sm-5" ng-controller="View2Ctrl">
-      {{cpuStatus}}
+    <!--jmx["java.lang:type=OperatingSystem", "ProcessCpuTime"]-->
+    <div class="form-group">
+        <label for="cpuStatus" class="col-sm-3">CPU time:</label>
+
+        <div id="cpuStatus" class="col-sm-5" ng-controller="View2Ctrl">
+            {{cpuStatus}}
+        </div>
     </div>
-  </div>
-  <!--jmx["java.lang:type=Memory","HeapMemoryUsage.used"]-->
-  <div class="form-group">
-    <label for="heapMemory" class="col-sm-3">Heap Memory used:</label>
-    <div id="heapMemory" class="col-sm-5" ng-controller="View2Ctrl">
-      {{heapMemory}}
+    <!--jmx["java.lang:type=Memory","HeapMemoryUsage.used"]-->
+    <div class="form-group">
+        <label for="heapMemory" class="col-sm-3">Heap Memory used:</label>
+
+        <div id="heapMemory" class="col-sm-5" ng-controller="View2Ctrl">
+            {{heapMemory}}
+        </div>
     </div>
-  </div>
-  <!--jmx["java.lang:type=Memory","HeapMemoryUsage.max"]-->
-  <div class="form-group">
-    <label for="heapMaxMemory" class="col-sm-3">Heap Memory max:</label>
-    <div id="heapMaxMemory" class="col-sm-5" ng-controller="View2Ctrl">
-      {{heapMaxMemory}}
+    <!--jmx["java.lang:type=Memory","HeapMemoryUsage.max"]-->
+    <div class="form-group">
+        <label for="heapMaxMemory" class="col-sm-3">Heap Memory max:</label>
+
+        <div id="heapMaxMemory" class="col-sm-5" ng-controller="View2Ctrl">
+            {{heapMaxMemory}}
+        </div>
     </div>
-  </div>
-  <!--jmx["java.lang:type=Threading", "ThreadCount"]-->
-  <div class="form-group">
-    <label for="activeThread" class="col-sm-3">Active Thread count:</label>
-    <div id="activeThread" class="col-sm-5" ng-controller="View2Ctrl">
-      {{activeThread}}
+    <!--jmx["java.lang:type=Threading", "ThreadCount"]-->
+    <div class="form-group">
+        <label for="activeThread" class="col-sm-3">Active Thread count:</label>
+
+        <div id="activeThread" class="col-sm-5" ng-controller="View2Ctrl">
+            {{activeThread}}
+        </div>
     </div>
-  </div>
-  <!--jmx["java.lang:type=GarbageCollector,name=PS MarkSweep", "CollectionCount"]-->
-  <div class="form-group">
-    <label for="garbageCollection" class="col-sm-3">Garbage collection count:</label>
-    <div id="garbageCollection" class="col-sm-5" ng-controller="View2Ctrl">
-      {{garbageCollection}}
+    <!--jmx["java.lang:type=GarbageCollector,name=PS MarkSweep", "CollectionCount"]-->
+    <div class="form-group">
+        <label for="garbageCollection" class="col-sm-3">Garbage collection count:</label>
+
+        <div id="garbageCollection" class="col-sm-5" ng-controller="View2Ctrl">
+            {{garbageCollection}}
+        </div>
     </div>
-  </div>
+    <div class="col-sm-10">
+        <div
+                line-chart
+                line-data='[
+                            { y: "0100", a: 75,  b: 65 },
+                            { y: "0200", a: 50,  b: 40 },
+                            { y: "0300", a: 50,  b: 40 },
+                            { y: "0400", a: 75,  b: 65 },
+                            { y: "0500", a: 50,  b: 40 },
+                            { y: "0600", a: 75,  b: 65 },
+                            { y: "0700", a: 100, b: 90 },
+                            { y: "0800", a: 100, b: 90 },
+                            { y: "0900", a: 15, b: 50 },
+                            { y: "1000", a: 20, b: 20 },
+                            { y: "1100", a: 10, b: 30 },
+                            { y: "2300", a: 50, b: 40 },
+                            { y: "2400", a: 100, b: 90 },
+                        ]'
+                line-xkey='y'
+                line-ykeys='["a", "b"]'
+                line-labels='["2015/8/31", "2015/8/30"]'
+                line-colors='["#31C0BE", "#c7254e"]'>
+        </div>
+    </div>
 </form>
